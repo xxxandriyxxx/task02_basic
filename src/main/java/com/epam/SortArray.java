@@ -29,7 +29,15 @@ public class SortArray {
         System.out.println(sum);
     }
 
- 
+    public static void printSumEven (int[] array){
+        int sum = 0;
+        for (int i : array) {
+            if (i % 2 == 0) {
+                sum += i;
+            }
+        }
+        System.out.println(sum);
+    }
 
 
 }
