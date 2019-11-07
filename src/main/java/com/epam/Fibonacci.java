@@ -27,5 +27,15 @@ public class Fibonacci {
         return max;
     }
 
+    public static long getBiggestEven(long[] array) {
+        long max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if ((array[i] > max) && (array[i] % 2 == 0)) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
 
 }
