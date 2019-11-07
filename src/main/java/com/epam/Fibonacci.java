@@ -42,6 +42,16 @@ public class Fibonacci {
         }
         return max;
     }
-    
+
+    public static int getPercentageOdd(long[] array) {
+        int counter = 0;
+        for (int i = 0; i < array.length; i++) {
+            if ((array[i] % 2) != 0) {
+                counter += 1;
+            }
+        }
+        return counter * 100 / array.length;
+    }
+
 
 }
