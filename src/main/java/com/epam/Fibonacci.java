@@ -1,6 +1,5 @@
 package com.epam;
 
-
 public class Fibonacci {
 
     public static long[] getSequence(int size) {

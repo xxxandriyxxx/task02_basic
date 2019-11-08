@@ -1,6 +1,5 @@
 package com.epam;
 
-
 public class SortArray {
 
     public static void printOdd(int[] array) {
@@ -38,6 +37,5 @@ public class SortArray {
         }
         System.out.println(sum);
     }
-
 
 }
