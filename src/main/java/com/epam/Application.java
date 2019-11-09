@@ -3,13 +3,30 @@ package com.epam;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * The entry point of the project
+ * <br>
+ * Launch the console to interact with user
+ */
 public class Application {
 
+    /**
+     * Prevents calls from a subclass, because this is utility class
+     * and it should not have a public or default constructor
+     *
+     * @throws UnsupportedOperationException unsupported operation exception
+     */
     protected Application() {
-        // prevents calls from subclass
         throw new UnsupportedOperationException();
     }
 
+    /**
+     * The entry point of the program
+     * <br>
+     * Launch the console to interact with user
+     *
+     * @param args the array of strings
+     */
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -64,6 +81,13 @@ public class Application {
         }
     }
 
+    /**
+     * Creates an array of integers in the assigned range
+     *
+     * @param firstNum the first element of array
+     * @param lastNum  the last element of array
+     * @return array of integers
+     */
     private static int[] createArray(int firstNum, int lastNum) {
         int[] array = new int[lastNum - firstNum + 1];
         for (int i = 0; i < array.length; i++) {
