@@ -5,6 +5,11 @@ import java.util.Scanner;
 
 public class Application {
 
+    protected Application() {
+        // prevents calls from subclass
+        throw new UnsupportedOperationException();
+    }
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -15,10 +20,10 @@ public class Application {
         long[] fibonacciArray;
 
         while (true) {
-            System.out.println("==================== TASK 2 ====================\n" +
-                    "'q' for exit\n" +
-                    "------------------------------------------------\n" +
-                    "Input the first number:");
+            System.out.println("================ TASK 2 =================\n"
+                    + "'q' for exit\n"
+                    + "-----------------------------------------\n"
+                    + "Input the first number:");
             str = scan.nextLine();
             if (str.equals("q")) {
                 System.out.println("Goodbye !!!");
@@ -29,8 +34,9 @@ public class Application {
                 str = scan.nextLine();
                 lastNum = Integer.parseInt(str);
                 array = createArray(firstNum, lastNum);
-                System.out.println("------------------------------------------------");
-                System.out.println("The interval [" + firstNum + ";" + lastNum + "] includes the next numbers:");
+                System.out.println("-----------------------------------------");
+                System.out.println("The interval [" + firstNum + ";" + lastNum
+                        + "] includes the next numbers:");
                 System.out.println(Arrays.toString(array));
                 System.out.println("Odd numbers:");
                 SortArray.printOdd(array);
@@ -40,7 +46,7 @@ public class Application {
                 SortArray.printSumOdd(array);
                 System.out.println("The sum of even numbers:");
                 SortArray.printSumEven(array);
-                System.out.println("------------------------------------------------");
+                System.out.println("-----------------------------------------");
                 System.out.println("Input the size of Fibonacci sequence:");
                 str = scan.nextLine();
                 fibonacciArray = Fibonacci.getSequence(Integer.parseInt(str));
@@ -66,7 +72,7 @@ public class Application {
         }
         return array;
     }
-    
+
 }
 
 

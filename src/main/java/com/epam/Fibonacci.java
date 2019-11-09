@@ -2,6 +2,10 @@ package com.epam;
 
 public class Fibonacci {
 
+    protected Fibonacci() {
+        throw new UnsupportedOperationException();
+    }
+
     public static long[] getSequence(int size) {
         long num1 = 0;
         long num2 = 1;

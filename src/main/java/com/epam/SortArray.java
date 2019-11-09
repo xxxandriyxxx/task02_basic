@@ -2,6 +2,10 @@ package com.epam;
 
 public class SortArray {
 
+    protected SortArray() {
+        throw new UnsupportedOperationException();
+    }
+
     public static void printOdd(int[] array) {
         for (int i : array) {
             if (i % 2 != 0) {
@@ -18,7 +22,7 @@ public class SortArray {
         }
     }
 
-    public static void printSumOdd (int[] array){
+    public static void printSumOdd(int[] array) {
         int sum = 0;
         for (int i : array) {
             if (i % 2 != 0) {
@@ -28,7 +32,7 @@ public class SortArray {
         System.out.println(sum);
     }
 
-    public static void printSumEven (int[] array){
+    public static void printSumEven(int[] array) {
         int sum = 0;
         for (int i : array) {
             if (i % 2 == 0) {
